@@ -75,6 +75,7 @@ plt.ylabel('Predicted')
 
 
 newValue = input('Please input the body of the email: ')
+
 newcorpus = []
 newCleaned = re.sub('[^a-zA-Z]', ' ',  newValue)
 newCleaned = newCleaned.lower()
