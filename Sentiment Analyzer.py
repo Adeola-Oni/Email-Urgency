@@ -82,9 +82,8 @@ newCleaned = newCleaned.split()
 newCleaned = [ps.stem(word) for word in newCleaned if not word in set(stopwords.words('english'))]
 newCleaned = ' '.join(newCleaned)
 newcorpus.append(newCleaned)
-    
-    
-countvectorizer = CountVectorizer()
-countvectorizer.fit(newcorpus)
 newX = countvectorizer.transform(newcorpus).toarray()
 newPrediction = nb.predict(newX)
+
+print(newPrediction)
+
